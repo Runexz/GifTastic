@@ -35,7 +35,6 @@ $(document).on('click', '.topic',function() {
     
 //     // stores the api plus variable x plus api key limit 10
     var queryURL = "https://api.giphy.com/v1/gifs/search?&q="+x+"&api_key=MB0lUDI2nmmf95mOhXhoTuuoW4Sda21C&limit=5";
-    // https://api.giphy.com/v1/gifs/search?&api_key=MB0lUDI2nmmf95mOhXhoTuuoW4Sda21C&q=mario&limit=10
 //     // console.log works
     console.log(queryURL);
 
