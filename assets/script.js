@@ -10,22 +10,24 @@ $(document).ready(function () {
     function renderButtons() {
         // create a for loop that appends a button for each string in the array
         for (var i = 0; i < topics.length; i++) {
-            var buttons = $('<button>' + topics[i] + "</button>");
+            var buttons = $("<button>");
             buttons.addClass("topic");
+            buttons.attr("data-name", topics[i]);
+            buttons.text(topics[i]);
             buttons.appendTo('#topics');
             // works
         }
     }
+        // does not work
+    $("#createButton").on('click', function () {
 
-    $('#createButton').on('click', function () {
-
-        var newText = $('#newButtonText').val();
+        var newText = $('#newButtonText').val().trim();
         console.log(newText);
         topics.push(newText);
         $("#topics").empty();
         renderButtons();
 
-    })
+    });
     // // when the user clicks on a button the page should grab 10 static, non-animated gif images from Giphy API and place then on page
     $(document).on('click', '.topic', function () {
 
@@ -37,7 +39,7 @@ $(document).ready(function () {
         console.log(x);
 
         //     // stores the api plus variable x plus api key limit 10
-        var queryURL = "https://api.giphy.com/v1/gifs/search?&q=" + x + "&api_key=MB0lUDI2nmmf95mOhXhoTuuoW4Sda21C&limit=5";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?&q=" + x + "&api_key=MB0lUDI2nmmf95mOhXhoTuuoW4Sda21C&limit=10";
         //     // console.log works
         console.log(queryURL);
 
