@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     // // create an array of strings, each one releated to a topic that intrests me and save it to a variable called topics.
     var topics = ['mario', 'link', 'sonic', 'mega man', 'master chief', 'metal gear', 'kratos', 'monster hunter world', 'cloud strife', 'street fighter'];
-
+    console.log(topics);
 
     renderButtons();
 
