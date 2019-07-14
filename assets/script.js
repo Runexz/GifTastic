@@ -20,8 +20,8 @@ $(document).ready(function () {
         }
     }
         // does not work
-    $("#createButton").on("click", function () {
-
+    $("#createButton").on("click", function (event) {
+        event.preventDefault();
         var newText = $('#newButtonText').val().trim();
         console.log(newText);
         topics.push(newText);
