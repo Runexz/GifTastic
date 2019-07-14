@@ -20,17 +20,19 @@ $(document).ready(function () {
         }
     }
         // does not work
-    $("#createButton").on('click', function () {
+    $("#createButton").on("click", function () {
 
         var newText = $('#newButtonText').val().trim();
         console.log(newText);
         topics.push(newText);
         $("#topics").empty();
+        // alert(newText + " was clicked."); button is recording whats in #newButtonText
         renderButtons();
 
     });
+    
     // // when the user clicks on a button the page should grab 10 static, non-animated gif images from Giphy API and place then on page
-    $(document).on('click', '.topic', function () {
+    $(document).on("click", ".topic", function () {
 
         // this clears the videos already on screen
         $("#displayBox").empty();
@@ -51,7 +53,7 @@ $(document).ready(function () {
         })
             .done(function (response) {
                 console.log(response);
-                for (let j = 0; j < response.data.length; j++) {
+                for (var j = 0; j < response.data.length; j++) {
 
                     // creating new div to hold ratings and gif with class newGif
                     var newDiv = $("<div>");
