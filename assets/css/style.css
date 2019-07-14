@@ -1,1 +1,41 @@
 
+
+body {
+    background-image: url('../../ffbg.jpg');
+   
+  /* background-repeat: no-repeat;
+  background-size: auto; */
+  /* height: 100%; */
+
+}
+
+.jumbotron {
+    background-image: url("../../ftbg.jpg");
+     background-position: center;
+     
+}
+
+h1 {
+    font-size: 70px;
+    color: rgb(250, 1, 1);
+    
+}
+
+p {
+    color: white;
+}
+
+.topic {
+    background: rgb(100, 2, 2);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+}
+
+#displayBox {
+    display: flex;
+    flex-flow: row wrap;
+    /* flex-wrap: wrap; */
+}

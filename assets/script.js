@@ -2,7 +2,7 @@
 // MB0lUDI2nmmf95mOhXhoTuuoW4Sda21C
 
 // // create an array of strings, each one releated to a topic that intrests me and save it to a variable called topics.
-var topics = ['mario', 'link', 'sonic', 'mega man', 'master chief', 'metal gear', 'kratos', 'monter hunter world', 'cloud strife', 'street fighter'];
+var topics = ['mario', 'link', 'sonic', 'mega man', 'master chief', 'metal gear', 'kratos', 'monster hunter world', 'cloud strife', 'street fighter'];
  
 
 renderButtons();
@@ -28,6 +28,9 @@ $('#createButton').on('click',function(){
 })
 // // when the user clicks on a button the page should grab 10 static, non-animated gif images from Giphy API and place then on page
 $(document).on('click', '.topic',function() {
+
+    // this clears the videos already on screen
+    $("#displayBox").empty();
     
     // stores the text on button to a variable
     var x = $(this).text();
@@ -44,6 +47,11 @@ $(document).on('click', '.topic',function() {
         method:"GET"})
     .done(function(response) {
         console.log(response);
+        for (let j = 0; j < response.data.length; j++) {
+            $("#displayBox").append("<p>Rating: " + response.data[j].rating + "</p>");
+            $("#displayBox").append("<img src='" + response.data[j].images.downsized.url + "'>");              
+        }
+        
     })
 })
 

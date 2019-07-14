@@ -15,19 +15,33 @@
 
 </head>
 <body>
+
+    <div class="jumbotron">
+        <h1 class="text-center">Video Game Mania!</h1>
+    </div>
+
+    <div class="container">
   <!-- buttons row -->
     <div id="topics"></div>
-   
-  <div>
-  <!-- field to submit new button -->
-    <label for="newButtonText">Add a video game!</label>
-    <input id="newButtonText" type="text">
-    <button id="createButton">Add button</button>
   </div>
 
+   
+    <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">  
+  <form>
+    <div class="form-group">
+  <!-- field to submit new button -->
+    <label for="newButtonText" class="navbar-text text-light">Add a video game!</label>
+    <input id="newButtonText" type="text" class="form-control">
+  </div>
+    <button id="createButton" class="btn btn-outline-light">Add button</button>
+  </form>
+</nav>
+</div>
+  <div class="container">
   <!-- where the gifs will be displayed -->
     <div id="displayBox"></div>
-
+  </div>
 
 
 
