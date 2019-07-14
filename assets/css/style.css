@@ -1,39 +1,37 @@
 
-
+/* background image for body */
 body {
     background-image: url('../../ffbg.jpg');
-   
-  /* background-repeat: no-repeat;
-  background-size: auto; */
-  /* height: 100%; */
-
 }
 
+/* background image for the jumbotron  */
 .jumbotron {
     background-image: url("../../ftbg.jpg");
-     background-position: center;
-     
-}
-
-h1 {
-    font-size: 70px;
-    color: rgb(250, 1, 1);
+    background-position: center;
+    }
     
+    /* font color and size of the jumbotron text */
+    h1 {
+        font-size: 70px;
+        font-family: Arial, Helvetica, sans-serif;
+    color: rgb(250, 1, 1);
 }
 
+/* color of the text on the buttons */
 p {
     color: white;
 }
 
+/* color of the buttons, font family of buttons, margin and padding */
 .topic {
     background: rgb(100, 2, 2);
     color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
     padding: 10px;
     margin: 5px;
 }
-
+/* adjusts the gifs from vertical stacking to side by side and wrap */
 #displayBox {
     display: flex;
     flex-flow: row wrap;

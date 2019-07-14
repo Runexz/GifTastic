@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- links to meyer reset, css, and js -->
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+  <!-- links to meyer reset, css, and js -->
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 
-    <!-- Title to html tab -->
-    <title>GifTastic</title>
+  <!-- Title to html tab -->
+  <title>GifTastic</title>
 
 </head>
+
 <body>
 
-    <div class="jumbotron">
-        <h1 class="text-center">Video Game Mania!</h1>
-    </div>
+  <div class="jumbotron">
+    <h1 class="text-center">Video Game Mania!</h1>
+  </div>
 
-    <div class="container">
-  <!-- buttons row -->
+  <div class="container">
+    <!-- buttons row -->
     <div id="topics"></div>
   </div>
 
-   
-    <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">  
-  <form>
-    <div class="form-group">
-  <!-- field to submit new button -->
-    <label for="newButtonText" class="navbar-text text-light">Add a video game!</label>
-    <input id="newButtonText" type="text" class="form-control">
-  </div>
-    <button id="createButton" class="btn btn-outline-light">Add button</button>
-  </form>
-</nav>
-</div>
+
   <div class="container">
-  <!-- where the gifs will be displayed -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <form>
+        <div class="form-group">
+          <!-- field to submit new button -->
+          <label for="newButtonText" class="navbar-text text-light">Add a video game!</label>
+          <input id="newButtonText" type="text" class="form-control">
+        </div>
+        <button id="createButton" class="btn btn-outline-light">Add button</button>
+      </form>
+    </nav>
+  </div>
+  <div class="container">
+    <!-- where the gifs will be displayed -->
     <div id="displayBox"></div>
   </div>
 
@@ -47,10 +50,9 @@
 
 
 
-    <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="assets/script.js"></script>
 </body>
+
 </html>
