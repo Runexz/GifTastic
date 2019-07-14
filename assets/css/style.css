@@ -31,9 +31,19 @@ p {
     padding: 10px;
     margin: 5px;
 }
+
 /* adjusts the gifs from vertical stacking to side by side and wrap */
+img {
+    height: 200px;
+    width: 200px;
+}
+
+.newGif {
+    float: left;
+    margin: 5px;
+}
 /* #displayBox {
     display: flex;
     flex-flow: row wrap; */
     /* flex-wrap: wrap; */
-}
+/* } */
