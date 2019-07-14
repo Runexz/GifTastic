@@ -10,6 +10,7 @@ $(document).ready(function () {
     function renderButtons() {
         // create a for loop that appends a button for each string in the array
         for (var i = 0; i < topics.length; i++) {
+            // console.log(i); // do I need to console log this?
             var buttons = $("<button>");
             buttons.addClass("topic");
             buttons.attr("data-name", topics[i]);
