@@ -49,10 +49,32 @@ $(document).on('click', '.topic', function () {
         .done(function (response) {
             console.log(response);
             for (let j = 0; j < response.data.length; j++) {
-                $("#displayBox").append("<p>Rating: " + response.data[j].rating + "</p>");
-                $("#displayBox").append("<img src='" + response.data[j].images.downsized.url + "'>");
+
+                // creating new div to hold ratings and gif with class newGif
+                var newDiv = $("<div>");
+                newDiv.addClass("newGif");
+
+                // creating variable that will pull rating data and link to new div
+                var gifRating = $("<p>").text("Rating: " + response.data[j].rating);
+                newDiv.append(gifRating);
+
+                // creating variable to create img then pull data both still and animated
+                var gifImage = $("<img>");
+                gifImage.attr("src", response.data[j].images.downsized_still.url);
+                gifImage.attr("data-still", response.data[j].images.downsized_still.url);
+                gifImage.attr("data-animate", response.data[j].images.downsized.url);
+                gifImage.attr("data-state", "still");
+                // link img to new div and link to html class displayBox
+                newDiv.append(gifImage);
+                $("#displayBox").append(newDiv);
+
+                // works but not still just animated
+                // $("#displayBox").append("<p>Rating: " + response.data[j].rating + "</p>");
+                // $("#displayBox").append("<img src='" + response.data[j].images.downsized.url + "'>");
             }
 
-        })
-})
+        });
+});
+
+
 
