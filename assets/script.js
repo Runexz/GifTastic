@@ -8,6 +8,9 @@ $(document).ready(function () {
     renderButtons();
 
     function renderButtons() {
+        // clears the input field if the user entered text
+        $("#newButtonText").val('');
+        
         // create a for loop that appends a button for each string in the array
         for (var i = 0; i < topics.length; i++) {
             // console.log(i); // do I need to console log this?
@@ -19,7 +22,7 @@ $(document).ready(function () {
             // works
         }
     }
-        // does not work
+        // When the submit button is clicked it will pull the information put in the input field and add to topics array
     $("#createButton").on("click", function (event) {
         event.preventDefault();
         var newText = $('#newButtonText').val().trim();
@@ -65,10 +68,10 @@ $(document).ready(function () {
 
                     // creating variable to create img then pull data both still and animated
                     var gifImage = $("<img>");
-                    gifImage.attr("src", response.data[j].images.downsized_still.url);
+                    gifImage.attr("src", response.data[j].images.downsized.url);
                     gifImage.attr("data-still", response.data[j].images.downsized_still.url);
                     gifImage.attr("data-animate", response.data[j].images.downsized.url);
-                    gifImage.attr("data-state", "still");
+                    gifImage.attr("data-state", "animate");
                     gifImage.addClass("image");
                     // link img to new div and link to html class displayBox
                     newDiv.append(gifImage);
