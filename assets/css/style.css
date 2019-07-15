@@ -1,12 +1,12 @@
 
 /* background image for body */
 body {
-    background-image: url('ffbg.jpg');
+    background-image: url('./images/ffbg.jpg');
 }
 
 /* background image for the jumbotron  */
 .jumbotron {
-    background-image: url("ftbg.jpg");
+    background-image: url("./images/ftbg.jpg");
     background-position: center;
     }
     
