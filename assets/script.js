@@ -10,7 +10,7 @@ $(document).ready(function () {
     function renderButtons() {
         // clears the input field if the user entered text
         $("#newButtonText").val('');
-        
+
         // create a for loop that appends a button for each string in the array
         for (var i = 0; i < topics.length; i++) {
             // console.log(i); // do I need to console log this?
@@ -22,7 +22,7 @@ $(document).ready(function () {
             // works
         }
     }
-        // When the submit button is clicked it will pull the information put in the input field and add to topics array
+    // When the submit button is clicked it will pull the information put in the input field and add to topics array
     $("#createButton").on("click", function (event) {
         event.preventDefault();
         var newText = $('#newButtonText').val().trim();
@@ -33,7 +33,7 @@ $(document).ready(function () {
         renderButtons();
 
     });
-    
+
     // // when the user clicks on a button the page should grab 10 static, non-animated gif images from Giphy API and place then on page
     $(document).on("click", ".topic", function () {
 
