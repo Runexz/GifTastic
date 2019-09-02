@@ -2,7 +2,7 @@
 $(document).ready(function () {
 
     // // create an array of strings, each one releated to a topic that intrests me and save it to a variable called topics.
-    var topics = ['mario', 'link', 'sonic', 'mega man', 'master chief', 'metal gear', 'kratos', 'monster hunter world', 'cloud strife', 'street fighter'];
+    var topics = ['Mario', 'Link', 'Sonic', 'Mega Man', 'Master Chief', 'Metal Gear', 'Kratos', 'Monster Hunter World', 'Cloud Strife', 'Street Fighter'];
     console.log(topics);
 
     renderButtons();
@@ -76,10 +76,6 @@ $(document).ready(function () {
                     // link img to new div and link to html class displayBox
                     newDiv.append(gifImage);
                     $("#displayBox").append(newDiv);
-
-                    // works but not still just animated
-                    // $("#displayBox").append("<p>Rating: " + response.data[j].rating + "</p>");
-                    // $("#displayBox").append("<img src='" + response.data[j].images.downsized.url + "'>");
                 }
 
             });
