@@ -1,25 +1,24 @@
 // this function will only run when the DOM is ready for javascript
 $(document).ready(function () {
 
-    // // create an array of strings, each one releated to a topic that intrests me and save it to a variable called topics.
+    // create an array of strings, each one releated to a topic that intrests me and save it to a variable called topics.
     var topics = ['Mario', 'Link', 'Sonic', 'Mega Man', 'Master Chief', 'Metal Gear', 'Kratos', 'Monster Hunter World', 'Cloud Strife', 'Street Fighter'];
-    console.log(topics);
+    // console.log(topics);
 
+    // runs function renderButtons when the page loads
     renderButtons();
 
     function renderButtons() {
         // clears the input field if the user entered text
         $("#newButtonText").val('');
 
-        // create a for loop that appends a button for each string in the array
+        // create a for loop that appends a button for each string in the topics array
         for (var i = 0; i < topics.length; i++) {
-            // console.log(i); // do I need to console log this?
             var buttons = $("<button>");
             buttons.addClass("topic");
             buttons.attr("data-name", topics[i]);
             buttons.text(topics[i]);
             buttons.appendTo('#topics');
-            // works
         }
     }
     // When the submit button is clicked it will pull the information put in the input field and add to topics array
@@ -42,14 +41,14 @@ $(document).ready(function () {
 
         // stores the text on button to a variable
         var x = $(this).text();
-        console.log(x);
+        // console.log(x);
 
-        //     // stores the api plus variable x plus api key limit 10
+        // stores the api plus variable x plus api key limit 10
         var queryURL = "https://api.giphy.com/v1/gifs/search?&q=" + x + "&api_key=MB0lUDI2nmmf95mOhXhoTuuoW4Sda21C&limit=10";
-        //     // console.log works
-        console.log(queryURL);
+        // console.log works
+        // console.log(queryURL);
 
-
+        
         $.ajax({
             url: queryURL,
             method: "GET"
