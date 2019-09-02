@@ -38,16 +38,18 @@ img {
     width: 200px;
 }
 
+/* prevents each image from stacking */
 .newGif {
     float: left;
     margin: 5px;
 }
 
+/* adds space so they will not be under the footer */
 #displayBox {
     padding-bottom: 570px;
 }
 
-
+/* clear the float from .newGif */
 #cssFooter {
     clear: left;
     color: white;
