@@ -42,8 +42,13 @@ img {
     float: left;
     margin: 5px;
 }
-/* #displayBox {
-    display: flex;
-    flex-flow: row wrap; */
-    /* flex-wrap: wrap; */
-/* } */
+
+#displayBox {
+    padding-bottom: 570px;
+}
+
+
+#cssFooter {
+    clear: left;
+    color: white;
+}
